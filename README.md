@@ -14,11 +14,24 @@ Criar uma aplicação que consome pedidos via fila RabbitMQ, persiste os dados n
 - TDD com JUnit 5 e Mockito
 
 ## 📁 Estrutura Inicial
-- API REST com Spring Boot
-- Microserviço consumidor RabbitMQ
-- Banco MongoDB como repositório dos pedidos
-- Testes unitários com TDD
-- Ambiente dockerizado
+
+- Modelagem de domínio com as classes `Pedido` e `Item`, representando os dados reais dos pedidos
+- Testes unitários com TDD cobrindo:
+  - Cálculo do valor total do pedido
+  - Cenário de lista de itens vazia
+  - Pedido com um item
+  - Cenário com valores inesperados (como quantidades negativas)
+- API REST com Spring Boot (em desenvolvimento)
+- Microserviço consumidor RabbitMQ (em desenvolvimento)
+- Banco MongoDB com repositório dos pedidos
+- Ambiente dockerizado (em breve)
+
+## ✅ Funcionalidades Implementadas
+
+- Cálculo do valor total de pedidos com base em itens (quantidade x preço unitário)
+- Testes automatizados com JUnit 5 garantindo a consistência da lógica de domínio
+- Repositório com Spring Data MongoDB para persistência
+- Código estruturado com boas práticas em pacotes separados: `model`, `repository`, `config`, `service`
 
 ## 🚀 Como executar
 (Instruções futuras de como rodar via Docker e testar)
